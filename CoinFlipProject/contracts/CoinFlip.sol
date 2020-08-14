@@ -65,8 +65,8 @@ mapping(address => bool) public lastFlip;
     function getBalance()public view returns(uint256){
     return balance;
     }
-    function getUserBalance (address user1) public view returns (uint256){
-      return userBalance[user1];
+    function getUserBalance () public view returns (uint256){
+      return userBalance[msg.sender];
     }
     function withdrawAll() public onlyOwner returns(uint256) {
       uint toTransfer = balance;
