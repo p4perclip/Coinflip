@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Coin Flip</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style> p {text-align:center}</style>
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-1"><p class="center">Coin Flip</p></h1>
+        <p class="center">You might to get lucky! </p>
+          <button class ="btn btn-outline-dark btn-lg" id="withdraw_button" aria-pressed="true" style = "position:relative; left:112%; top:-190px;">ONLY</button>
+          <button class ="btn btn-outline-warning btn-lg" id="fund_button" aria-pressed="true" style = "position:relative; left:112%; top:-190px;">OWNER</button>
+        <div class="input">
+          <p style="margin-left:0em"><input type="text" class="w3-third" id="add_balance_input" placeholder="ETH" ></p>
+        </div>
+        <button class ="btn btn-outline-dark btn-lg" id="withdrawBalance_button" aria-pressed="true" style = "position:relative; right:33%; top:-285px;">WITHDRAW </button>
+        <button class ="btn btn-outline-warning btn-lg" id="addBalance_button" aria-pressed="true" style = "position:relative; right:33%; top:-285px;">FUND</button>
+        <!-- <p style = "position:relative; right:78%; top:-280px;"> User Balance:<span  id="user_balance_output"></span></p> -->
+        <!-- <p style = "position:relative; left:67%; top:-315px;"> Contract Balance:<span  id="balance_output"></span></p> -->
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <h2><p class="center">How big are your pants:</p></h2><b>
+        <br>
+        <div class="input">
+          <p style="margin-left:0em"><input type="text" class="w3-third" id="bet_size_input" placeholder="Place Bet Here" ></p>
+          <br>
+          <button class="btn btn-outline-dark btn-lg active"   role="button" id="head_button" aria-pressed="true" style = "position:relative; left:42%; top:0px;">HEAD</button>
+          <button class="btn btn-outline-danger btn-lg active" role="button" id="tails_button" aria-pressed="true" style = "position:relative; left:42%; top:0px;">TAILS</button>
+          <br>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="visible">
+      <div  class="mx-auto" id ="coin_fliped" style="width: 15%"><img src="./8f0604aedc34d33d2f41113c312a588d.gif" style="width:100%;max-width:400px" class="w3-image" alt="Flip image"></div>
+      <div  class="mx-auto" id="big_win" style="width: 15%"><img src="./win.gif" style="width:100%;max-width:400px" class="w3-image" alt="Win image"></div>
+      <div  class="mx-auto" id="big_loose" style="width: 15%"><img src="./loose.gif" style="width:100%;max-width:400px" class="w3-image" alt="Loose image"></div>
+    </div>
+  </body>
+</html>
